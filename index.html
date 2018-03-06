@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Main CSS file -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <title>Restaurant Reviews</title>
   </head>
 
-  <body>
+  <body class="font-lato">
     <header>
       <nav>
         <h1>
@@ -26,11 +28,11 @@
         <div class="filter-options">
           <h2>Filter Results</h2>
 
-          <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+          <select class="font-lato" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
             <option value="all">All Neighborhoods</option>
           </select>
 
-          <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+          <select class="font-lato" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
             <option value="all">All Cuisines</option>
           </select>
         </div>
