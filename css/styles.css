@@ -59,6 +59,9 @@ footer a {
 .backg-black {
   background-color: #252831;
 }
+.backg-green {
+  background-color: #055721;
+}
 .backg-silver {
   background-color: #f3f3f3;
 }
@@ -198,10 +201,10 @@ nav h1 a {
   height: 100%;
   width: 100%;
 }
-#restaurant-container {
+#restaurant-container, #reviews-container {
   width: 90%;
   margin: 0 auto;
-  padding-top: 1em;
+  padding-top: 1.5em;
 }
 #restaurant-name {
   font-size: 1.4em;
@@ -216,6 +219,8 @@ nav h1 a {
 }
 #restaurant-address {
   margin: 10px 0px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
 }
 #restaurant-cuisine {
   font-size: 1.2em;
@@ -224,9 +229,6 @@ nav h1 a {
   width: 100%;
   letter-spacing: 2px;
   padding: .2em 0;
-}
-#reviews-container {
-  padding: 30px 40px 80px;
 }
 #reviews-container h3 {
   font-size: 1.5em;
@@ -257,4 +259,40 @@ nav h1 a {
 #restaurant-hours tr {
   border-top: 1px solid gray;
   padding: .4em 0;
+}
+.rating-review {
+  display: inline;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.4em 1.2em;
+  box-sizing: border-box;
+}
+.comments-review {
+  padding: 1.2em;
+}
+.single-review {
+  margin: 2em 0;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px silver;
+  border-radius: 20px 0;
+  overflow: hidden;
+}
+.name-date {
+  margin-bottom: 1.5em;
+  padding: 1em;
+}
+.name-review, .date-review {
+  vertical-align: middle;
+  display: inline-block;
+}
+.name-review {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.date-review {
+  vertical-align: middle;
+  font-style: italic;
+  font-size: 0.9em;
+  padding: 0 2em;
 }

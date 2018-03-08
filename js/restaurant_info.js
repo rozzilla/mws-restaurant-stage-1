@@ -53,6 +53,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   name.innerHTML = restaurant.name;
 
   const address = document.getElementById('restaurant-address');
+  address.setAttribute("class","color-green");
   address.innerHTML = restaurant.address;
 
   const image = document.getElementById('restaurant-img');
@@ -98,6 +99,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
+  title.setAttribute("class","color-green font-center");
   container.appendChild(title);
 
   if (!reviews) {
@@ -117,20 +119,28 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  * Create review HTML and add it to the webpage.
  */
 createReviewHTML = (review) => {
-  const li = document.createElement('li');
-  const name = document.createElement('p');
+  const li = document.createElement('article');
+  li.setAttribute("class","single-review");
+  const nameDate = document.createElement('div');
+  nameDate.setAttribute("class","name-date backg-black color-white");
+  li.appendChild(nameDate);
+  const name = document.createElement('div');
+  name.setAttribute("class","name-review");
   name.innerHTML = review.name;
-  li.appendChild(name);
+  nameDate.appendChild(name);
 
-  const date = document.createElement('p');
+  const date = document.createElement('div');
+  date.setAttribute("class","date-review");
   date.innerHTML = review.date;
-  li.appendChild(date);
+  nameDate.appendChild(date);
 
-  const rating = document.createElement('p');
+  const rating = document.createElement('div');
+  rating.setAttribute("class","rating-review backg-green color-white");
   rating.innerHTML = `Rating: ${review.rating}`;
   li.appendChild(rating);
 
-  const comments = document.createElement('p');
+  const comments = document.createElement('div');
+  comments.setAttribute("class","comments-review");
   comments.innerHTML = review.comments;
   li.appendChild(comments);
 
