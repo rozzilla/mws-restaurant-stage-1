@@ -17,8 +17,15 @@ a {
 	text-decoration: none;
 }
 a:hover, a:focus {
-	color: #3397db;
-	text-decoration: none;
+	color: #252831;
+  background-color: white;
+  text-decoration: none;
+  border: 1px dashed #055721;
+}
+iframe *:focus
+{
+  background-color: red;
+  border: 2px solid green;
 }
 a img {
 	border: none 0px #fff;
@@ -30,7 +37,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 h1 {
-  padding: 1.5em;
+  padding: 1em;
   font-size: 1.1em;
 }
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -215,6 +222,7 @@ nav h1 a {
   line-height: 1.1;
 }
 #restaurant-img {
+  width: 100%;
   border-radius: 15px 0 0 0;
 }
 #restaurant-address {
