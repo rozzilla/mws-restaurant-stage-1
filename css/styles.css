@@ -44,7 +44,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 figure {
   margin: 0;
-  max-width: 350px;
+  max-width: 265px;
+  transition: all 500ms ease;
 }
 footer {
   font-size: 0.9em;

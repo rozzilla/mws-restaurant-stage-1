@@ -59,10 +59,27 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   address.setAttribute("class","color-green");
   address.innerHTML = restaurant.address;
 
+  const picture = document.getElementById('restaurant-picture');
   const image = document.getElementById('restaurant-img');
+
   image.className = 'restaurant-img'
   image.alt = restaurant.name + " (" + restaurant.cuisine_type + " restaurant)"
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.src = DBHelper.imageUrlForRestaurantExtension(restaurant,"w265");
+
+  const source1 = document.createElement('source');
+  source1.setAttribute("srcset",DBHelper.imageUrlForRestaurantExtension(restaurant,"w450"));
+  source1.setAttribute("media","(min-width: 550px)");
+  picture.appendChild(source1);
+
+  const source2 = document.createElement('source');
+  source2.setAttribute("srcset",DBHelper.imageUrlForRestaurantExtension(restaurant,"w550"));
+  source2.setAttribute("media","(min-width: 750px)");
+  picture.appendChild(source2);
+
+  const source3 = document.createElement('source');
+  source3.setAttribute("srcset",DBHelper.imageUrlForRestaurant(restaurant));
+  source3.setAttribute("media","(min-width: 950px)");
+  picture.appendChild(source3);
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
