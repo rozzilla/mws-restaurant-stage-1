@@ -35,7 +35,6 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
     option.value = neighborhood;
-    option.setAttribute("role","option");
     option.setAttribute("id",neighborhood.toLowerCase());
     select.append(option);
   });
@@ -65,7 +64,6 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
     option.value = cuisine;
-    option.setAttribute("role","option");
     option.setAttribute("id",cuisine.toLowerCase());
     select.append(option);
   });
@@ -110,10 +108,6 @@ updateRestaurants = () => {
   const currentNselect = nSelect.options[nIndex].id;
   nSelect.setAttribute("aria-activedescendant",currentNselect);
   nSelect.setAttribute("aria-labelledby",currentNselect);
-
-  /*
-    const lblCuisinesSct = document.getElementById('labelCuisinesSelect');
-  lblNeighborhoodsSct.innerText = cSelect[cIndex].text;*/
 
   DBHelper.fetchRestaurantByCuisineAndNeighborhood(cuisine, neighborhood, (error, restaurants) => {
     if (error) { // Got an error!
