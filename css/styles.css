@@ -140,12 +140,11 @@ nav h1 a {
 }
 .filter-options select {
   background-color: white;
-  border: 1px solid #fff;
-  font-size: 0.8em;
-  min-height: 35px;
-  letter-spacing: 0.5px;
+  border: 0;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
   margin: 0.5em;
-  padding: 0 0.5em;
+  padding: 0.25em 0.5em;
   max-width: 100%;
 }
 
@@ -223,6 +222,7 @@ nav h1 a {
 }
 #restaurant-img {
   width: 100%;
+  margin-bottom: -0.5em;
   border-radius: 15px 0 0 0;
 }
 #restaurant-address {
@@ -237,6 +237,7 @@ nav h1 a {
   width: 100%;
   letter-spacing: 2px;
   padding: .2em 0;
+  position: relative;
 }
 #reviews-container h3 {
   font-size: 1.5em;
