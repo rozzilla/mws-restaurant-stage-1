@@ -146,6 +146,7 @@ createRestaurantHTML = (restaurant) => {
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
+  name.setAttribute("class","color-green");
   li.append(name);
 
   const neighborhood = document.createElement('p');
@@ -159,6 +160,7 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute("class","color-white backg-green");
   li.append(more)
 
   return li
