@@ -60,26 +60,28 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   address.innerHTML = restaurant.address;
 
   const picture = document.getElementById('restaurant-picture');
-  const image = document.getElementById('restaurant-img');
 
+  const source950px = document.createElement('source');
+  source950px.setAttribute("media","(min-width: 950px)");
+  source950px.setAttribute("srcset",DBHelper.imageUrlForRestaurant(restaurant));
+  picture.appendChild(source950px);
+
+  const source750px = document.createElement('source');
+  source750px.setAttribute("media","(min-width: 750px)");
+  source750px.setAttribute("srcset",DBHelper.imageUrlForRestaurantExtension(restaurant,"w550"));
+  picture.appendChild(source750px);
+
+  const source550px = document.createElement('source');
+  source550px.setAttribute("media","(min-width: 550px)");
+  source550px.setAttribute("srcset",DBHelper.imageUrlForRestaurantExtension(restaurant,"w450"));
+  picture.appendChild(source550px);
+
+  const image = document.createElement('img');
+  image.setAttribute("id","restaurant-img");
   image.className = 'restaurant-img'
   image.alt = restaurant.name + " (" + restaurant.cuisine_type + " restaurant)"
   image.src = DBHelper.imageUrlForRestaurantExtension(restaurant,"w265");
-
-  const source1 = document.createElement('source');
-  source1.setAttribute("srcset",DBHelper.imageUrlForRestaurantExtension(restaurant,"w450"));
-  source1.setAttribute("media","(min-width: 550px)");
-  picture.appendChild(source1);
-
-  const source2 = document.createElement('source');
-  source2.setAttribute("srcset",DBHelper.imageUrlForRestaurantExtension(restaurant,"w550"));
-  source2.setAttribute("media","(min-width: 750px)");
-  picture.appendChild(source2);
-
-  const source3 = document.createElement('source');
-  source3.setAttribute("srcset",DBHelper.imageUrlForRestaurant(restaurant));
-  source3.setAttribute("media","(min-width: 950px)");
-  picture.appendChild(source3);
+  picture.appendChild(image);
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
