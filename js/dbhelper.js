@@ -154,6 +154,13 @@ class DBHelper {
   }
 
   /**
+   * Restaurant image URL with a different extension.
+   */
+  static imageUrlForRestaurantExtension(restaurant,extension) {
+    return (`/img/${extension}_${restaurant.photograph}`);
+  }
+
+  /**
    * Map marker for a restaurant.
    */
   static mapMarkerForRestaurant(restaurant, map) {

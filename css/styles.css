@@ -313,7 +313,6 @@ nav h1 a {
   body {
     font-size: 1.2em;
   }
-
   figure {
     max-width: 450px;
   }
@@ -323,16 +322,13 @@ nav h1 a {
   body {
     font-size: 1.4em;
   }
-
   figure {
     max-width: 550px;
   }
-
   #restaurant-hours td:first-child {
     font-weight: bold;
     font-style: italic;
   }
-
   #restaurant-hours td, #restaurant-hours tr {
     display: inline-table;
     border: 0;
@@ -342,9 +338,16 @@ nav h1 a {
 }
 
 @media only screen and (min-width:950px) {
+  figure {
+    margin: 0 auto;
+    max-width: 800px;
+  }
   .header-main-footer {
     width: 940px;
     margin: 0 auto;
     box-shadow: 0 0 30px silver;
+  }
+  #restaurant-name, #restaurant-address {
+    text-align: center;
   }
 }
