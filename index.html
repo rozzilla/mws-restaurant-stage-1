@@ -11,39 +11,41 @@
   </head>
 
   <body class="font-lato color-black">
-    <header>
-      <nav class="font-center backg-black">
-        <h1>
-          <a href="/" class="color-white">Restaurant Reviews</a>
-        </h1>
-      </nav>
-    </header>
+    <div class="header-main-footer">
+      <header>
+        <nav class="font-center backg-black">
+          <h1>
+            <a href="/" class="color-white">Restaurant Reviews</a>
+          </h1>
+        </nav>
+      </header>
 
-    <main>
-      <aside>
-        <div id="map"></div>
-      </aside>
+      <main>
+        <aside>
+          <div id="map"></div>
+        </aside>
 
-      <section>
-        <div class="filter-options">
-          <h2 class="color-white">Filter Results</h2>
+        <section>
+          <div class="filter-options">
+            <h2 class="color-white">Filter Results</h2>
 
-          <select class="font-lato" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-            <option value="all">All Neighborhoods</option>
-          </select>
+            <select class="font-lato" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+              <option value="all">All Neighborhoods</option>
+            </select>
 
-          <select class="font-lato" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-            <option value="all">All Cuisines</option>
-          </select>
-        </div>
+            <select class="font-lato" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+              <option value="all">All Cuisines</option>
+            </select>
+          </div>
 
-        <ul id="restaurants-list" class="font-center"></ul>
-      </section>
-    </main>
+          <ul id="restaurants-list" class="font-center"></ul>
+        </section>
+      </main>
 
-    <footer class="font-center color-white backg-black">
-      Copyright (c) 2017 <a class="color-white" href="/">Restaurant Reviews</a> All Rights Reserved.
-    </footer>
+      <footer class="font-center color-white backg-black">
+        Copyright (c) 2017 <a class="color-white" href="/">Restaurant Reviews</a> All Rights Reserved.
+      </footer>
+    </div>
 
     <!-- Beginning scripts -->
     <!-- Database helpers -->

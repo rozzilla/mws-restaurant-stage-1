@@ -20,7 +20,7 @@ a:hover, a:focus {
 	color: #252831;
   background-color: white;
   text-decoration: none;
-  border: 1px dashed #055721;
+  box-shadow: 0 0 25px gray;
 }
 iframe *:focus
 {
@@ -45,6 +45,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 figure {
   margin: 0;
+  max-width: 350px;
 }
 footer {
   font-size: 0.9em;
@@ -88,11 +89,11 @@ nav {
 nav h1 a {
   font-size: 1.2em;
   font-weight: 200;
-  letter-spacing: 10px;
+  letter-spacing: .2em;
   text-transform: uppercase;
 }
 #breadcrumb {
-  padding: 1em 1.5em;
+  padding: 1em 2em;
   margin: 0;
 }
 
@@ -217,7 +218,7 @@ nav h1 a {
   font-size: 1.4em;
   font-weight: 200;
   letter-spacing: 0;
-  margin: 1em 0 2em;
+  margin: 0.5em 0 0.5em;
   text-transform: uppercase;
   line-height: 1.1;
 }
@@ -286,6 +287,9 @@ nav h1 a {
   border-radius: 20px 0;
   overflow: hidden;
 }
+.single-review:first-child {
+  margin-top: 1em;
+}
 .name-date {
   margin-bottom: 1.5em;
   padding: 1em;
@@ -303,4 +307,44 @@ nav h1 a {
   font-style: italic;
   font-size: 0.9em;
   padding: 0 2em;
+}
+
+@media only screen and (min-width:550px) {
+  body {
+    font-size: 1.1em;
+  }
+
+  figure {
+    max-width: 450px;
+  }
+}
+
+@media only screen and (min-width:750px) {
+  body {
+    font-size: 1.2em;
+  }
+
+  figure {
+    max-width: 550px;
+  }
+
+  #restaurant-hours td:first-child {
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  #restaurant-hours td, #restaurant-hours tr {
+    display: inline-table;
+    border: 0;
+    padding-right: 1em;
+    padding-top: 0.7em;
+  }
+}
+
+@media only screen and (min-width:950px) {
+  .header-main-footer {
+    width: 940px;
+    margin: 0 auto;
+    box-shadow: 0 0 30px silver;
+  }
 }
