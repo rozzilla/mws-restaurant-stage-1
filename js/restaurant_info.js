@@ -14,12 +14,15 @@ window.initMap = () => {
         center: restaurant.latlng,
         scrollwheel: false
       });
+      self.map.addListener('tilesloaded', function(){
+        const title = "Map of the restaurant " + restaurant.name + " in " + restaurant.address;
+        document.querySelector('#map').querySelector('iframe').setAttribute('title',title);
+      });
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
     }
   });
 }
-
 /**
  * Get current restaurant from page URL.
  */
@@ -100,6 +103,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
   title.setAttribute("class","color-green font-center");
+  title.setAttribute("tabindex","0");
   container.appendChild(title);
 
   if (!reviews) {
