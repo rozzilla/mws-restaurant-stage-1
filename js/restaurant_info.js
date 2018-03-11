@@ -52,6 +52,9 @@ fetchRestaurantFromURL = (callback) => {
  * Create restaurant HTML and add it to the webpage
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
+  var metaList = document.getElementsByTagName("META");
+  metaList[2].setAttribute("content","Reviews of the " + restaurant.name + " restaurant in " + restaurant.address);
+
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
 
