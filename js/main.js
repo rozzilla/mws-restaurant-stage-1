@@ -82,6 +82,9 @@ window.initMap = () => {
     center: loc,
     scrollwheel: false
   });
+  self.map.addListener('tilesloaded', function(){
+    document.querySelector('#map').querySelector('iframe').setAttribute('title','Restaurants review map');
+  });
   updateRestaurants();
 }
 
