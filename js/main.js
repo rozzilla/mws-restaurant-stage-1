@@ -103,11 +103,17 @@ updateRestaurants = () => {
   const cuisine = cSelect[cIndex].value;
   const neighborhood = nSelect[nIndex].value;
 
-  const currentCselect = cSelect.options[cSelect.selectedIndex].id;
+  const currentCselect = cSelect.options[cIndex].id;
   cSelect.setAttribute("aria-activedescendant",currentCselect);
+  cSelect.setAttribute("aria-labelledby",currentCselect);
 
-  const currentNselect = nSelect.options[nSelect.selectedIndex].id;
+  const currentNselect = nSelect.options[nIndex].id;
   nSelect.setAttribute("aria-activedescendant",currentNselect);
+  nSelect.setAttribute("aria-labelledby",currentNselect);
+
+  /*
+    const lblCuisinesSct = document.getElementById('labelCuisinesSelect');
+  lblNeighborhoodsSct.innerText = cSelect[cIndex].text;*/
 
   DBHelper.fetchRestaurantByCuisineAndNeighborhood(cuisine, neighborhood, (error, restaurants) => {
     if (error) { // Got an error!
