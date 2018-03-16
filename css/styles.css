@@ -82,6 +82,14 @@ footer a {
 .color-green {
   color: #055721;
 }
+.skip-link {
+  position: absolute;
+  padding: .5em 1em;
+  z-index: -1;
+}
+.skip-link:focus {
+  z-index: 999999;
+}
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
