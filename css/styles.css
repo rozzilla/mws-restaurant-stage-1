@@ -39,6 +39,24 @@ h1 {
   padding: 1em;
   font-size: 1.1em;
 }
+h2 {
+  font-size: 1.1em;
+  font-weight: normal;
+  line-height: 1;
+  margin: 0.5em;
+}
+h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 0;
+  padding: 0.5em;
+  text-transform: uppercase;
+}
+h4 {
+  font-style: italic;
+  padding-left: .5em;
+  font-size: 1em;
+}
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -140,12 +158,6 @@ nav h1 a {
   box-sizing: border-box;
   text-align: center;
 }
-.filter-options h2 {
-  font-size: 1.1em;
-  font-weight: normal;
-  line-height: 1;
-  margin: 0.5em;
-}
 .filter-options select {
   background-color: white;
   border: 0;
@@ -180,13 +192,6 @@ nav h1 a {
   display: block;
   margin: 0;
   max-width: 100%;
-}
-#restaurants-list li h1 {
-  font-size: 1.1em;
-  font-weight: bold;
-  letter-spacing: 0;
-  padding: 0.5em;
-  text-transform: uppercase;
 }
 #restaurants-list p {
   margin: 0;
