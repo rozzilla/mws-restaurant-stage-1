@@ -61,7 +61,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	display: block;
 }
 figure {
-  margin: 0;
+  margin: 0 auto;
   max-width: 265px;
   transition: all 500ms ease;
 }
@@ -186,6 +186,8 @@ nav h1 a {
   vertical-align: top;
   font-size: 0.9em;
   box-shadow: 0 0 25px grey;
+  min-height: 350px;
+  position: relative;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -199,7 +201,9 @@ nav h1 a {
   padding: 0.25em 0.5em;
 }
 #restaurants-list li a {
-  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   margin-top: 1em;
   letter-spacing: 0.3px;
   padding: 0.7em 2em;
@@ -222,7 +226,7 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   width: 90%;
   margin: 0 auto;
-  padding-top: 1.5em;
+  padding: 1.5em 0;
 }
 #restaurant-name {
   font-size: 1.4em;
@@ -231,6 +235,7 @@ nav h1 a {
   margin: 0.5em 0 0.5em;
   text-transform: uppercase;
   line-height: 1.1;
+  text-align: center;
 }
 #restaurant-img {
   width: 100%;
@@ -240,6 +245,7 @@ nav h1 a {
 #restaurant-address {
   margin: 0.8em 0px;
   font-weight: bold;
+  text-align: center;
   letter-spacing: -0.5px;
 }
 #restaurant-cuisine {
@@ -254,6 +260,10 @@ nav h1 a {
 #reviews-container h3 {
   font-size: 1.5em;
   padding-bottom: 0.8em
+}
+#restaurant-hours {
+  margin: 0 auto;
+  min-width: 265px;
 }
 #reviews-list {
   margin: 0;
@@ -328,14 +338,21 @@ nav h1 a {
   figure {
     max-width: 450px;
   }
+  #restaurant-hours {
+    min-width: 450px;
+    text-align: center;
+  }
+  #restaurants-list li {
+    min-height: 400px;
+  }
 }
 
 @media only screen and (min-width:750px) {
   body {
     font-size: 1.4em;
   }
-  figure {
-    max-width: 550px;
+  figure, #restaurant-container {
+    width: 550px;
   }
   #restaurant-hours td:first-child {
     font-weight: bold;
@@ -351,15 +368,47 @@ nav h1 a {
 
 @media only screen and (min-width:950px) {
   figure {
-    margin: 0 auto;
-    max-width: 800px;
+    width: 800px;
+    max-width: 100%;
   }
   .header-main-footer {
-    width: 80%;
     margin: 0 auto;
     box-shadow: 0 0 30px silver;
   }
-  #restaurant-name, #restaurant-address {
+  .comments-reviews {
+    font-size: .9em;
+    line-height: 1.2;
+  }
+  .single-review {
+    width: 850px;
+    margin: 0 auto;
+    margin-top: 1.5em;
+  }
+  #restaurant-container {
+    width: 800px;
+  }
+  #restaurant-hours {
+    width: 820px;
+  }
+  #restaurants-list li {
+    min-height: 450px;
+  }
+}
+
+@media only screen and (min-width:1250px) {
+  main {
     text-align: center;
+  }
+  .single-review {
+    width: 100%;
+  }
+  #restaurant-container, #reviews-container {
+    display: inline-table;
+  }
+  #reviews-container {
+    width: 600px;
+    padding: 0 0.8em;
+    box-sizing: border-box;
+    margin-bottom: 2em;
   }
 }
